@@ -2,16 +2,9 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import WeatherForecast from './components/WeatherForecast/WeatherForecast';
 
 function App() {
-  const [count, setCount] = useState(0)
-  const App = () => {
-
-    return (
-      <h1>Hello world!</h1>
-    );
-  }
-
   const weatherForecasts = [
     {
       day: 'Mon',
@@ -55,7 +48,7 @@ function App() {
       <h1>Local Weather</h1>
       <section>
         {weatherForecasts.map((forecast, index) => (
-          <weatherForecasts key={index} data={forecast} />
+          <WeatherForecast key={index} data={forecast} />
         ))}
       </section>
     </div>
